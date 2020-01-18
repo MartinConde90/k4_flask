@@ -1,6 +1,6 @@
 #Jinja ----> motor de plantillas, permite crear ficheros html de forma dinamica
 
-#ItsDangerous  ---->  permiete meter cuestiones de criptografia y seguridad
+#ItsDangerous  ---->  permite meter cuestiones de criptografia y seguridad
 
 #MarkupSafe  ---->  formar html correctamente e impedir ataques
 
