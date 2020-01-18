@@ -5,18 +5,25 @@
 #MarkupSafe  ---->  formar html correctamente e impedir ataques
 
 CREAR ENTORNO VIRTUAL
-# python -m venv venv -----> (el segundo venv es el nombre que hemos elegido)
-# venv\Scripts\activate ----> activa flask y pondra (venv) a la izquierda del codigo cuando se inicie
-# pip install Flask -----> (para instalar flask) 
-# pip freeze ----> (para ver las librerias que tiene)
-# pip list ----> (lo mismo que freeze pero te lo dice en humano)
-# pip freeze > requirements.txt ----> ( metemos las librerias en ese archivo, para poder usarla desde otro ordenador)                     hariamos git clone (enlace de git y pongo nombre de la nueva carpeta) y python -m venv (nombre), activariamos flask y pip install requirements.txt
-# set FLASK_APP=hello.py ----> en el terminal, crea una ventana a nivel del terminal, mete el programa en la variable (hello.py)
-# flask run ---> levanta un servidor web de pruebas entre otras cosas, es lo que hace Click. 
+ -python -m venv venv -----> (el segundo venv es el nombre que hemos elegido)
+ 
+ -venv\Scripts\activate ----> activa flask y pondra (venv) a la izquierda del codigo cuando se inicie
+ 
+ -pip install Flask -----> (para instalar flask) 
+ 
+ -pip freeze ----> (para ver las librerias que tiene)
+ 
+ -pip list ----> (lo mismo que freeze pero te lo dice en humano)# pip freeze > requirements.txt ----> ( metemos las librerias en ese           archivo, para poder usarla desde otro ordenador)hariamos git clone (enlace de git y pongo nombre de la nueva carpeta) y                 python -m venv(nombre), activariamos flask y pip install requirements.txt
+ 
+ -set FLASK_APP=hello.py ----> en el terminal, crea una ventana a nivel del terminal, mete el programa en la variable (hello.py)
+ 
+ -flask run ---> levanta un servidor web de pruebas entre otras cosas, es lo que hace Click. 
                 "Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)"
-# flask run --p=(y numero de fichero donde queramos meterlo, para cambiarlo) El 5000 de arriba
+                
+ -flask run --p=(y numero de fichero donde queramos meterlo, para cambiarlo) El 5000 de arriba
 
-# en el archivo html, ponemos (doc) y pulsamos tab. Se abre el codigo, lo que está en blanco lo hemos puesto nosotros                       luego para lanzarlo de nuevo en la ventana, ponemos "flask run --port=5000" en el terminal
+VIENDO CODIGO BÁSICO HTML
+ -creamos archivo h.html, ponemos (doc) y pulsamos tab. Se abre el codigo, lo que está en blanco lo hemos puesto nosotros                       luego para lanzarlo de nuevo en la ventana, ponemos "flask run --port=5000" en el terminal
 
                 <html lang="en"> #ETIQUETA DE INICIO
             <head>
