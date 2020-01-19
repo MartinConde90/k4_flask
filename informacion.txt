@@ -13,12 +13,12 @@ pip freeze ----> (para ver las librerias que tiene)
 
 pip list ----> (lo mismo que freeze pero te lo dice en humano) 
 
-<<<<<<< HEAD
+
 pip freeze > requirements.txt ----> ( metemos las librerias en ese archivo, para poder usarla desde otro ordenador)hariamos git clone (enlace de git y pongo nombre de la nueva carpeta a continuacion) y python -m venv(nombre), activariamos flask y pip install -r requirements.txt
-=======
--pip list ----> (lo mismo que freeze pero te lo dice en humano)
--pip freeze > requirements.txt ----> (metemos las librerias en ese archivo, para poder usarla desde otro ordenador)hariamos git clone          (enlace de git y pongo nombre de la nueva carpeta) y python -m venv(nombre), activariamos flask y pip install -r requirements.txt
->>>>>>> 8d4f5a27579c5ed643992550b93a59bfbfa77689
+
+pip list ----> (lo mismo que freeze pero te lo dice en humano)
+pip freeze > requirements.txt ----> (metemos las librerias en ese archivo, para poder usarla desde otro ordenador)hariamos git clone          (enlace de git y pongo nombre de la nueva carpeta) y python -m venv(nombre), activariamos flask y pip install -r requirements.txt
+
 
 
             despues del archivo hello.py
@@ -34,7 +34,7 @@ VIENDO CODIGO BÁSICO HTML
             <html lang="en"> #ETIQUETA DE INICIO
         <head>
             <meta charset="UTF-8">   #JUEGO DE CARACTERES UTF8
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">  #PARA QUE SE VEA BIEN EN                                                                                                                    MOVILES Y NAVEGADORES DE ESCRITORIO
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">  #PARA QUE SE VEA BIEN EN MOVILES Y NAVEGADORES DE ESCRITORIO
             <meta http-equiv="X-UA-Compatible" content="ie=edge"> #PARA CONTENIDO ESPECIFICO DE INTERNET EXPLORER
             <title>Mi pagina</title>
         </head>
