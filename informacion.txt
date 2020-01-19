@@ -13,7 +13,12 @@ pip freeze ----> (para ver las librerias que tiene)
 
 pip list ----> (lo mismo que freeze pero te lo dice en humano) 
 
+<<<<<<< HEAD
 pip freeze > requirements.txt ----> ( metemos las librerias en ese archivo, para poder usarla desde otro ordenador)hariamos git clone (enlace de git y pongo nombre de la nueva carpeta a continuacion) y python -m venv(nombre), activariamos flask y pip install -r requirements.txt
+=======
+-pip list ----> (lo mismo que freeze pero te lo dice en humano)
+-pip freeze > requirements.txt ----> (metemos las librerias en ese archivo, para poder usarla desde otro ordenador)hariamos git clone          (enlace de git y pongo nombre de la nueva carpeta) y python -m venv(nombre), activariamos flask y pip install -r requirements.txt
+>>>>>>> 8d4f5a27579c5ed643992550b93a59bfbfa77689
 
 
             despues del archivo hello.py
