@@ -49,3 +49,6 @@ CREACION DE APP
     convertimos nuestra aplicacion en un modulo, creando la carpeta app
             creamos el archivo __init__.py, que crea FlasK() y va a insertarle las plantillas y rutas que necesitemos
                     una vez creado, si en run.py ponemos import app, se importará todo que haya en app
+                    
+<a href="./detail">Detalle</a> #nos imprime Detalle, y al clicarle, nos redirige a ese link
+<a href="./">Home</a>  #poniendo esto en "detail", nos retorna de la que venimos
