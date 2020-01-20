@@ -46,3 +46,7 @@ CREACION DE APP
                     
 <a href="./detail">Detalle</a> #nos imprime Detalle, y al clicarle, nos redirige a ese link
 <a href="./">Home</a>  #poniendo esto en "detail", nos retorna de la que venimos
+
+
+set FLASK_APP=run.py
+flask run --reload (para volver a lanzarlo en el buscador, sin necesidad de tirarlo antes)

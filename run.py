@@ -1,4 +1,3 @@
-from myapp import app #del modulo app me importas la instancia
-
+from myapp import app 
 if __name__ == '__main__':
     app.run()
