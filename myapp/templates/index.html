@@ -3,18 +3,24 @@
 {% block title %} Indice {% endblock %}
 
 { % block content % }
-    <table class="region_table">  <!--este class nos diferencia lo que vaya despues del =, para poder aplicarle cosas-->
-            <tr>
-                <th>Región</th>
-                <th>Total Ventas</th>
-                <th>Total Beneficio</th>
-            </tr>
-            {% for key, data in registros %}
-            <tr>
-                <td>{{key}}></td>
-                <td>{{"%.2f €" | format(data.ingresos_totales)}}</td>
-                <td>{{"%.2f €" | format(data.beneficios_totales)}}</td>
-            </tr>
-            {% endfor %}
-    </table>
+    <form action="/detail"> <!--formulario, dentro del action es la ruta a la que voy a llamar cuando le de a enviar-->
+        <table class="region_table">  <!--este class nos diferencia lo que vaya despues del =, para poder aplicarle cosas-->
+                <tr>
+                    <th></th>
+                    <th>Región</th>
+                    <th>Total Ventas</th>
+                    <th>Total Beneficio</th>
+                </tr>
+                {% for key, data in registros %}
+                <tr>
+                    <td><input: type="radio" name="region" value="{{key}}"></td> <!--boton seleccion-->
+                    <td><a href="/detail?region={{key}}">{{key}}</a></td> <!--hace que los nombres de las regiones sean enlaces-->
+                    <td>{{key}}></td>
+                    <td>{{"%.2f €" | format(data.ingresos_totales)}}</td>
+                    <td>{{"%.2f €" | format(data.beneficios_totales)}}</td>
+                </tr>
+                {% endfor %}
+        </table>
+        <button type="submit">Enviar</button> <!--boton que envia la info al servidor-->
+    </form>
 { % endblock % }

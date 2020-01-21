@@ -1,20 +1,20 @@
 from myapp import app 
-from flask import render_template #render_template es una funcion
+from flask import render_template, request #render_template es una funcion
 import csv
 
 @app.route("/") #este app es la instancia del __init__
-def index():
+def index(): #esa funcion va asociada al recurso entre parentesis de arriba, los paremetros que metamos arriba tras /, irán aquí
     '''
-    leer el fichero sales10.csv y transformarlo en un diccionario
+    leer el fichero sales.csv y transformarlo en un diccionario
     '''
-    fSales = open('../data/sales10.csv','r') #los puntos hacen salir de myapp, y luego que entre en data y sales, 'r' es solo lectura
+    fSales = open('./data/sales.csv','r') #los puntos hacen salir de myapp, y luego que entre en data y sales, 'r' es solo lectura
 
     csvreader = csv.reader(fSales, delimiter=',') #es un manejador de csv
     registros = []
     for linea in csvreader:
         registros.append(linea)
     
-    cabecera = registros[0] # aqui tenemos la primera linea de sales10.cvs, con pais, producto etc etc
+    cabecera = registros[0] # aqui tenemos la primera linea de sales.cvs, con pais, producto etc etc
 
     ventas = []
     for datos in registros[1:]:
@@ -63,4 +63,18 @@ def index():
 
 @app.route("/detail")
 def detail():
-    return render_template('detail.html')
+
+    datos = {}
+    region_name = request.values['region'] #values es un diccionario con los datos
+    for linea in ventas:
+        print(linea['region'])
+        if linea['region'] == region_name:
+            if linea['pais'] in datos:
+                regAct = datos[linea['pais']]
+                regAct['ingresos_totales'] += float(linea['ingresos_totales'])
+                regAct['beneficios_totales'] += float(linea['beneficio'])
+            else:
+                datos[linea['pais']] = {'ingresos_totales': float(linea['ingresos_totales']), 'beneficios_totales': float(linea['beneficio'])}
+
+    print(datos)
+    return render_template('detail.html', region=region_name, registros=datos)

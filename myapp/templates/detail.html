@@ -3,6 +3,25 @@
 {% block title %} Detalle {% endblock %}
 
 {% block content %}
-        <h1>Página de detalle</h1>
-        <p>Lorem ipsum...</p>
+    <h1>Resumen de {{region}}</h1>
+        
+{% if registros | lenght == 0 %}
+    <p>No hay datos</p>
+{% else %}
+    <table class="country_table">  <!--este class nos diferencia lo que vaya despues del =, para poder aplicarle cosas-->
+        <tr>
+            <th>País</th>
+            <th>Total Ventas</th>
+            <th>Total Beneficio</th>
+        </tr>
+        {% for key, data in registros.item() %}
+        <tr>
+            <td>{{key}}></td>
+            <td>{{"%.2f €" | format(data.ingresos_totales)}}</td>
+            <td>{{"%.2f €" | format(data.beneficios_totales)}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endif %}
+
 {% endblock%}

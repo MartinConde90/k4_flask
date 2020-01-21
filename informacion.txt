@@ -50,3 +50,11 @@ CREACION DE APP
 
 set FLASK_APP=run.py
 flask run --reload (para volver a lanzarlo en el buscador, sin necesidad de tirarlo antes)
+
+
+PARA QUE EL SOLO SE RECARGUE SIN NECESIDAD DE TIRAR Y LEVANTAR EL SERVIDOR CADA VEZ QUE HAGAMOS CAMBIOS
+pip install python-dotenv
+fichero .env y le metemos FLASK_APP=run.py 
+                          FLASK_ENV=development
+pip freeze > requirements.txt
+
